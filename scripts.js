@@ -14,12 +14,21 @@ window.onscroll = function () {
 // Hamburger Menu Toggle
 document.getElementById('menu-toggle').addEventListener('click', function () {
     var menu = document.getElementById('menu-items');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 });
+
+// Smooth Scroll for Menu Items
+document.querySelectorAll('#menu-items a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
+
 
 // Search Bar Functionality with keyword highlighting
 document.getElementById('search-btn').addEventListener('click', function () {
