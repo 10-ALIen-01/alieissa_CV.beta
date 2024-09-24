@@ -3,11 +3,11 @@
 **Mobile**: (+20) 11 4673 1716  
 **LinkedIn**: [Ali Eissa@LnkdIN](https://www.linkedin.com/in/ali-eissa-44154a180)  
 **Address**:  
-- El Sheikh Zayed city, 1st district, Cairo  
-- El Warraq, Giza  
+-- El Sheikh Zayed city, 1st district, Cairo  
+-- El Warraq, Giza  
 
 ## Professional Summary  
-"Data analyst with hands-on experience in supply chain management, logistics, and e-commerce operations across major companies like Amazon and Noon. Proven track record in optimizing seller performance, resolving operational discrepancies, and driving efficiency in logistics through data analysis and root cause investigation..."
+"Data analyst with hands-on experience in operations and supply chain management, logistics, and e-commerce operations across major companies like Amazon and Noon. Proven track record in optimizing seller performance, resolving operational discrepancies, and driving efficiency in logistics through data analysis and root cause investigation..."
 
 ## Education  
 **Faculty of Commerce, English Section** - Cairo University (2017-2021)  
