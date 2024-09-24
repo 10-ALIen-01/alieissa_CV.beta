@@ -2,14 +2,18 @@
 window.onscroll = function () {
     var name = document.getElementById('name');
     var contact = document.getElementById('contact');
+    
     if (window.scrollY > 50) {
-        name.style.transform = 'scale(0.9)'; // Scale down slightly on scroll
+        name.style.transform = 'translateX(-150px) scale(0.9)'; // Move name to left and scale
         contact.style.opacity = '0.9'; // Adjust contact info visibility
+        contact.style.transform = 'translateX(-150px)'; // Move contact info to left as well
     } else {
-        name.style.transform = 'scale(1)'; // Reset when at the top
+        name.style.transform = 'translateX(0) scale(1)'; // Reset when at the top
         contact.style.opacity = '1'; // Full opacity
+        contact.style.transform = 'translateX(0)'; // Reset contact info
     }
 };
+
 
 // Hamburger Menu Toggle
 document.getElementById('menu-toggle').addEventListener('click', function () {
