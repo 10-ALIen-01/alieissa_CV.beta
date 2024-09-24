@@ -21,30 +21,32 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease; /* Smooth transition for entire header */
 }
 
 #name {
     text-align: center; /* Center the name */
     margin: 0 auto; /* Keep it centered on screen */
     font-size: 2.5rem; /* Ensure it’s prominent */
-    transition: transform 0.3s ease; /* Smooth scaling transition */
+    transition: transform 0.3s ease, margin 0.5s ease; /* Smooth scaling and repositioning */
 }
 
 #contact {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and position */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 20px; /* Space between name and contact info */
+    align-items: flex-start; /* Align contact info to the left */
+    opacity: 1; /* Default full visibility */
 }
 
 .header-content {
     display: flex;
     justify-content: flex-start; /* Align content to the left */
     align-items: center;
-    padding: 10px; /* Reduce padding for a compact header */
+    padding: 10px;
     transition: all 0.5s ease; /* Smooth transitions for the layout */
 }
-
 
 .search {
     display: flex;
@@ -104,6 +106,22 @@ main {
     padding: 20px;
 }
 
+/* Sticky effect when scrolling */
+.sticky {
+    background-color: #34495e; /* Darker background when scrolling */
+    padding: 5px 0; /* Smaller padding when sticky */
+}
+
+.sticky #name {
+    transform: scale(0.9); /* Scale down the name slightly */
+    margin-left: 10px; /* Move the name to the left */
+}
+
+.sticky #contact {
+    opacity: 0.9; /* Slightly fade the contact info */
+    transform: translateX(-10px); /* Move contact info to the left */
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .header-content {
@@ -111,15 +129,11 @@ main {
         align-items: flex-start;
     }
 
-#name {
-    font-size: 2.5rem;
-    transition: transform 0.3s ease; /* Smooth scaling transition */
-}
+    #name {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
 
-#contact {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px; /* Give some space between name and contact */
-    transition: all 0.5s ease; /* Smooth transition when repositioning */
+    #contact {
+        margin-left: 0; /* Reset margin on smaller screens */
+    }
 }
-
