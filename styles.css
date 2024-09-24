@@ -63,6 +63,13 @@ header {
     cursor: pointer;
 }
 
+/* Highlight search result */
+mark {
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     display: flex;
