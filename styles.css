@@ -39,9 +39,12 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    padding: 10px; /* Reduce padding for a compact header */
+    transition: all 0.5s ease; /* Smooth transitions for the layout */
 }
+
 
 .search {
     display: flex;
@@ -108,11 +111,15 @@ main {
         align-items: flex-start;
     }
 
-    #name {
-        font-size: 24px;
-    }
-
-    #contact {
-        transform: translateY(-20px);
-    }
+#name {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
 }
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Give some space between name and contact */
+    transition: all 0.5s ease; /* Smooth transition when repositioning */
+}
+
