@@ -21,8 +21,21 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
     }
 });
 
-// Search Bar Functionality
+// Search Bar Functionality with keyword highlighting
 document.getElementById('search-btn').addEventListener('click', function () {
-    var query = document.getElementById('search-input').value;
-    alert('Search functionality not implemented: ' + query);
+    var query = document.getElementById('search-input').value.toLowerCase();
+    var content = document.querySelector('main');
+    var paragraphs = content.getElementsByTagName('p');
+    
+    // Clear previous highlights
+    for (var p of paragraphs) {
+        p.innerHTML = p.innerHTML.replace(/<mark>(.*?)<\/mark>/g, "$1");
+    }
+
+    if (query) {
+        for (var p of paragraphs) {
+            var regex = new RegExp(query, "gi");
+            p.innerHTML = p.innerHTML.replace(regex, (match) => `<mark>${match}</mark>`);
+        }
+    }
 });
